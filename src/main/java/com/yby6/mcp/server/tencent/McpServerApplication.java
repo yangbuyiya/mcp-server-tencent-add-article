@@ -106,10 +106,10 @@ public class McpServerApplication implements CommandLineRunner {
      */
     @Override
     public void run(String... args) throws Exception {
-        log.info("check tencent cookie ...");
+        log.info("检查是否成功配置 cookie ...");
         String cookie = tencentApiProperties.getCookie();
         if (cookie == null || cookie.isEmpty()) {
-            log.error("tencent cookie is empty");
+            log.error("没有配置 cookie 请检查配置文件");
         }
     }
 }
