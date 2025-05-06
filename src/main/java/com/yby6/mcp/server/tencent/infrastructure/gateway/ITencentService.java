@@ -5,15 +5,34 @@ import com.yby6.mcp.server.tencent.infrastructure.gateway.dto.AddArticleResponse
 import retrofit2.Call;
 import retrofit2.http.*;
 
+/**
+ * 腾讯云开发者社区服务接口
+ * 
+ * 该接口定义了与腾讯云开发者社区API交互的方法。
+ * 使用Retrofit框架实现HTTP请求，支持文章的发布等操作。
+ * 所有请求都需要包含必要的认证信息和请求头。
+ * 
+ * @author yby6
+ * @version 1.0.0
+ */
 public interface ITencentService {
-    
     
     /**
      * 发布文章到腾讯云开发者社区
-     *
-     * @param cookie   Cookie
-     * @param request  发文请求
-     * @return 发文响应
+     * 
+     * 该方法通过HTTP POST请求将文章发布到腾讯云开发者社区。
+     * 请求包含完整的HTTP头信息，模拟浏览器行为，确保请求能够被正确处理。
+     * 
+     * 请求头说明：
+     * - accept: 指定接受的响应类型
+     * - content-type: 指定请求体类型为JSON
+     * - origin/referer: 指定请求来源
+     * - user-agent: 指定客户端信息
+     * - 其他安全相关头部
+     * 
+     * @param cookie 用户认证Cookie，用于身份验证
+     * @param request 文章发布请求，包含文章内容、标题等信息
+     * @return 包含发布结果的响应对象
      */
     @POST("developer/api/article/addArticle")
     @Headers({

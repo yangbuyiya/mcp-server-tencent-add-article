@@ -10,16 +10,19 @@
     </parent>
     <groupId>com.yby6.mcp</groupId>
     <artifactId>mcp-server-tencent</artifactId>
-    <version>1.0.0.0</version>
+    <version>1.0.0</version>
     <name>mcp-server-tencent</name>
     <description>mcp-server-tencent</description>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring-ai.version>1.0.0-M6</spring-ai.version>
         <spring-boot.version>3.4.5</spring-boot.version>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <file.encoding>UTF-8</file.encoding>
     </properties>
 
 
@@ -115,7 +118,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>3.13.0</version>
                 <configuration>
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
